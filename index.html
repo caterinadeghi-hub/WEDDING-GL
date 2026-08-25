@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6efe7">
+  <meta name="theme-color" content="#fbf6ef">
   <title>Luca & Giulia — 11 Giugno 2027</title>
   <meta name="description" content="Informazioni, soggiorno, come arrivare e RSVP per il matrimonio di Luca e Giulia.">
   <style>
@@ -75,7 +75,7 @@
       position:relative;
       box-shadow: 0 4px 15px rgba(0,0,0,0.04);
       object-fit: cover;
-      background-color: var(--paper); /* Colore di fallback se la foto carica lentamente */
+      background-color: var(--paper); /* Colore di fallback */
     }
     .intro{
       text-align:center;
@@ -202,7 +202,7 @@
 <header class="hero">
   <div class="hero-card">
     <!-- Percorso esplicito alla foto locale -->
-    <img src="./PHOTO-2026-08-25-12-04-08_2.jpg" alt="Luca e Giulia">
+    <img src="./sposi.jpg" alt="Luca e Giulia">
   </div>
   <div class="intro">
     <div class="ornament">♥</div>
@@ -334,7 +334,10 @@
         <h2>RSVP</h2>
         <p>Vi chiediamo gentilmente di confermare la vostra presenza entro il <strong>30 novembre 2026</strong>.</p>
       </div>
-      <form name="conferme-rsvp" method="POST" data-netlify="true" action="/">
+      <!-- Modulo ottimizzato per acquisizione su DB Netlify senza redirect espliciti -->
+      <form name="conferme-rsvp" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="conferme-rsvp">
+        
         <div class="fields">
           <label>Nome e cognome
             <input name="nome" required placeholder="Il vostro nome">
