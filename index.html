@@ -28,9 +28,8 @@
       margin:0;
       color:var(--ink);
       background-color: var(--ivory);
-      /* Sfondo locale con trasparenza ridotta per rendere sposi, ulivi e trulli molto più visibili */
       background-image: 
-        linear-gradient(rgba(247, 240, 232, 0.55), rgba(251, 246, 239, 0.88)), 
+        linear-gradient(rgba(247, 240, 232, 0.65), rgba(251, 246, 239, 0.90)), 
         url('./sfondo.jpg');
       background-size: cover;
       background-position: center top;
@@ -106,7 +105,7 @@
     .section-title p{max-width:650px;margin:auto;color:var(--muted);line-height:1.8}
     .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
     .card{
-      background:rgba(251,246,239,.94); /* Leggermente più opaco per contrastare lo sfondo visibile */
+      background:rgba(251,246,239,.94);
       backdrop-filter: blur(10px);
       border:1px solid rgba(178,138,67,.42);
       border-radius:var(--radius);
@@ -186,8 +185,7 @@
 
 <header class="hero">
   <div class="hero-card">
-    <!-- NOME SEMPLIFICATO PER EVITARE ERRORI -->
-    <img src="./sposi.jpg" alt="Luca e Giulia">
+    <img src="./foto.jpg" alt="Luca e Giulia">
   </div>
   <div class="intro">
     <div class="ornament">♥</div>
@@ -380,12 +378,14 @@
       <div class="grid">
         <article class="card">
           <h3>Giulia</h3>
-          <p>Telefono: <strong>+39 331 7239747</strong></p>
+          <p style="margin-bottom: 6px;">Telefono: <a href="tel:+393317239747" style="font-weight: 600;">+39 331 7239747</a></p>
+          <p style="margin-top: 0; margin-bottom: 20px;">Email: <a href="mailto:giulia.deghi1@gmail.com" style="text-decoration: underline; color: var(--gold);">giulia.deghi1@gmail.com</a></p>
           <a class="btn" href="tel:+393317239747">Chiama Giulia</a>
         </article>
         <article class="card">
           <h3>Luca</h3>
-          <p>Telefono: <strong>+39 327 6943803</strong></p>
+          <p style="margin-bottom: 6px;">Telefono: <a href="tel:+393276943803" style="font-weight: 600;">+39 327 6943803</a></p>
+          <p style="margin-top: 0; margin-bottom: 20px;">Email: <a href="mailto:lucaf.bianco88@gmail.com" style="text-decoration: underline; color: var(--gold);">lucaf.bianco88@gmail.com</a></p>
           <a class="btn" href="tel:+393276943803">Chiama Luca</a>
         </article>
       </div>
