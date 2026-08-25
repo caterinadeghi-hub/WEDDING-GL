@@ -28,12 +28,12 @@
       margin:0;
       color:var(--ink);
       background-color: var(--ivory);
-      /* SFONDO LOCALE: cerca il file esatto "sfondo.jpg" */
+      /* VELATURA RIDOTTA AL MINIMO: lo sfondo ora sarà molto più scuro e visibile */
       background-image: 
-        linear-gradient(rgba(247, 240, 232, 0.65), rgba(251, 246, 239, 0.90)), 
-        url('sfondo.jpg');
+        linear-gradient(rgba(247, 240, 232, 0.35), rgba(251, 246, 239, 0.50)), 
+        url("sfondo.jpg");
       background-size: cover;
-      background-position: center top;
+      background-position: center center;
       background-attachment: fixed;
       font-family:Montserrat,system-ui,sans-serif;
     }
@@ -144,12 +144,6 @@
     .timeline time{font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:var(--gold); text-shadow: 0 1px 2px rgba(255,255,255,0.8);}
     .timeline h3{margin:0;font-size:1.55rem}
     .timeline p{margin:5px 0;color:var(--muted);line-height:1.6}
-    .rsvp{
-      background:rgba(105,113,90,.05);
-      backdrop-filter: blur(5px);
-      border-top:1px solid rgba(178,138,67,.28);
-      border-bottom:1px solid rgba(178,138,67,.28);
-    }
     .small{font-size:.72rem;color:var(--muted);line-height:1.6}
     .footer{text-align:center;padding:70px 0 35px}
     .footer .script{font-size:2.7rem}
@@ -186,7 +180,6 @@
 
 <header class="hero">
   <div class="hero-card">
-    <!-- FOTO LOCALE: cerca il file esatto "foto.jpg" -->
     <img src="sposi.jpg" alt="Luca e Giulia">
   </div>
   <div class="intro">
@@ -313,7 +306,7 @@
     </div>
   </section>
 
-  <section id="rsvp" class="rsvp">
+  <section id="rsvp" style="background:rgba(105,113,90,.05); border-top:1px solid rgba(178,138,67,.28); border-bottom:1px solid rgba(178,138,67,.28);">
     <div class="wrap">
       <div class="section-title">
         <div class="ornament">♡</div>
@@ -363,7 +356,7 @@
         <h2>Dress code</h2>
         <p>Elegante, romantico e in sintonia con l'atmosfera della nostra giornata pugliese.</p>
       </div>
-      <div class="card" style="max-width:720px;margin:auto;text-align:center">
+      <div class="card" style="max-width:720px;margin:auto;text-align:center;">
         <h3>Eleganza in Masseria</h3>
         <p>Abbigliamento elegante e confortevole. Per qualsiasi dubbio sul dress code, contattateci.</p>
       </div>
