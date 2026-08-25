@@ -28,9 +28,10 @@
       margin:0;
       color:var(--ink);
       background-color: var(--ivory);
+      /* Percorso esplicito allo sfondo locale con velatura avorio per la leggibilità */
       background-image: 
         linear-gradient(rgba(247, 240, 232, 0.92), rgba(251, 246, 239, 0.98)), 
-        url('sfondo-ulivi.jpg');
+        url('./sfondo-ulivi.jpg');
       background-size: cover;
       background-position: center top;
       background-attachment: fixed;
@@ -74,6 +75,7 @@
       position:relative;
       box-shadow: 0 4px 15px rgba(0,0,0,0.04);
       object-fit: cover;
+      background-color: var(--paper); /* Colore di fallback se la foto carica lentamente */
     }
     .intro{
       text-align:center;
@@ -199,7 +201,8 @@
 
 <header class="hero">
   <div class="hero-card">
-    <img src="PHOTO-2026-08-25-12-04-08_2.jpg" alt="Luca e Giulia">
+    <!-- Percorso esplicito alla foto locale -->
+    <img src="./PHOTO-2026-08-25-12-04-08_2.jpg" alt="Luca e Giulia">
   </div>
   <div class="intro">
     <div class="ornament">♥</div>
