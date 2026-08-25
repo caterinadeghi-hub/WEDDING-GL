@@ -23,19 +23,23 @@
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
+    
     body{
       margin:0;
       color:var(--ink);
-      background:
-        radial-gradient(circle at 10% 12%, rgba(178,138,67,.07), transparent 22rem),
-        radial-gradient(circle at 92% 70%, rgba(105,113,90,.08), transparent 24rem),
-        var(--ivory);
+      background-color: var(--ivory);
+      background-image: 
+        linear-gradient(rgba(247, 240, 232, 0.88), rgba(251, 246, 239, 0.95)), 
+        url('https://images.unsplash.com/photo-1623869601614-722a4fc0fc31?auto=format&fit=crop&w=2000&q=80');
+      background-size: cover;
+      background-position: center top;
+      background-attachment: fixed;
       font-family:Montserrat,system-ui,sans-serif;
     }
+    
     a{color:inherit}
     .wrap{width:min(1080px,92vw);margin:auto}
     
-    /* Centratura e proporzioni della prima pagina */
     .hero{
       min-height:100svh;
       display:flex;
@@ -46,22 +50,12 @@
       position:relative;
       overflow:hidden;
     }
-    .hero:before,.hero:after{
-      content:"";
-      position:absolute;
-      width:230px;height:230px;
-      border:1px solid rgba(178,138,67,.35);
-      border-radius:50%;
-      pointer-events:none;
-    }
-    .hero:before{left:-140px;top:12%}
-    .hero:after{right:-140px;bottom:10%}
     .hero-card{
       background:rgba(251,246,239,.82);
       border:1px solid rgba(178,138,67,.55);
       box-shadow:var(--shadow);
       padding:clamp(12px, 3vw, 22px);
-      max-width:min(450px, 60vh); /* Controlla sia la larghezza che l'altezza massima */
+      max-width:min(450px, 60vh);
       width:100%;
       margin: 0 auto 30px auto;
       position:relative;
@@ -91,10 +85,16 @@
       letter-spacing:.24em;
       font-size:.72rem;
       color:var(--muted);
+      text-shadow: 0 1px 2px rgba(255,255,255,0.8);
     }
     h1,h2,h3{font-family:"Cormorant Garamond",serif;font-weight:500}
     h1{font-size:clamp(2.7rem,7vw,5rem);margin:.2em 0;color:var(--olive-dark)}
-    .script{font-family:Parisienne,cursive;color:var(--gold);font-size:clamp(2rem,6vw,4rem)}
+    .script{
+      font-family:Parisienne,cursive;
+      color:var(--gold);
+      font-size:clamp(2rem,6vw,4rem);
+      text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+    }
     .ornament{color:var(--gold);font-size:1.5rem;letter-spacing:.4em;margin:12px 0}
     section{padding:78px 0}
     .section-title{text-align:center;margin-bottom:34px}
@@ -102,7 +102,8 @@
     .section-title p{max-width:650px;margin:auto;color:var(--muted);line-height:1.8}
     .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
     .card{
-      background:rgba(251,246,239,.86);
+      background:rgba(251,246,239,.90);
+      backdrop-filter: blur(8px);
       border:1px solid rgba(178,138,67,.42);
       border-radius:var(--radius);
       padding:30px;
@@ -132,12 +133,16 @@
     .stay .card{padding:24px}
     .price{font-size:.78rem;color:var(--olive);font-weight:600;letter-spacing:.08em;text-transform:uppercase}
     .timeline{max-width:760px;margin:auto}
-    .timeline .item{display:grid;grid-template-columns:120px 1fr;gap:22px;padding:20px 0;border-bottom:1px solid rgba(178,138,67,.28)}
+    .timeline .item{
+      display:grid;grid-template-columns:120px 1fr;gap:22px;padding:20px 0;
+      border-bottom:1px solid rgba(178,138,67,.28);
+    }
     .timeline time{font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:var(--gold)}
     .timeline h3{margin:0;font-size:1.55rem}
     .timeline p{margin:5px 0;color:var(--muted);line-height:1.6}
     .rsvp{
-      background:rgba(105,113,90,.08);
+      background:rgba(105,113,90,.05);
+      backdrop-filter: blur(5px);
       border-top:1px solid rgba(178,138,67,.28);
       border-bottom:1px solid rgba(178,138,67,.28);
     }
@@ -146,7 +151,7 @@
     label{display:block;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
     input,select,textarea{
       width:100%;margin-top:7px;padding:14px 15px;border:1px solid rgba(178,138,67,.45);
-      border-radius:12px;background:rgba(255,255,255,.45);font:inherit;color:var(--ink);
+      border-radius:12px;background:rgba(255,255,255,.65);font:inherit;color:var(--ink);
       outline:none;
     }
     input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(178,138,67,.10)}
@@ -159,7 +164,7 @@
     .footer p{color:var(--muted);font-size:.78rem;letter-spacing:.08em}
     .topbar{
       position:fixed;z-index:10;top:16px;left:50%;transform:translateX(-50%);
-      background:rgba(251,246,239,.86);backdrop-filter:blur(12px);
+      background:rgba(251,246,239,.90);backdrop-filter:blur(12px);
       border:1px solid rgba(178,138,67,.4);border-radius:999px;
       padding:7px;box-shadow:0 8px 25px rgba(78,64,43,.08);
       display:flex;gap:3px;
@@ -168,6 +173,7 @@
     .topbar a:hover{background:rgba(178,138,67,.12)}
     .notice{
       margin:20px auto 0;max-width:680px;padding:13px 16px;border-left:2px solid var(--gold);
+      background:rgba(251,246,239,.8);
       color:var(--muted);font-size:.78rem;line-height:1.6;text-align:left;
     }
     @media(max-width:760px){
@@ -193,8 +199,7 @@
 
 <header class="hero">
   <div class="hero-card">
-    <!-- IMAGO SEGNAPOSTO: Quando pubblicherai il sito reale, sostituisci il link qui sotto con: src="assets/invito-principale.jpg" -->
-    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Invito di matrimonio di Luca e Giulia">
+    <img src="PHOTO-2026-08-25-12-04-08.jpg" alt="Luca e Giulia">
   </div>
   <div class="intro">
     <div class="ornament">♥</div>
@@ -245,10 +250,10 @@
       </div>
       <div class="stay">
         <article class="card">
-          <div class="price">Struttura 01</div>
-          <h3>Hotel convenzionato</h3>
-          <p>Nome struttura, distanza dalla location, eventuale tariffa dedicata e condizioni di soggiorno.</p>
-          <a class="btn" href="#" onclick="return comingSoon(event)">Prenota</a>
+          <div class="price">Trullo</div>
+          <h3>Trullo Pugliese</h3>
+          <p style="margin-bottom: 24px;">Referente: <strong>Cinzia Pugliese</strong><br>Telefono: <a href="tel:+393490839801" style="text-decoration: underline; color: var(--gold);">+39 349 083 9801</a></p>
+          <a class="btn primary" target="_blank" rel="noopener" href="http://www.trullopugliese.com">Visita il sito</a>
         </article>
         <article class="card">
           <div class="price">Struttura 02</div>
@@ -263,7 +268,7 @@
           <a class="btn" href="#" onclick="return comingSoon(event)">Prenota</a>
         </article>
       </div>
-      <div class="notice"><strong>Nota:</strong> i tre riquadri sono già predisposti per inserire i nomi reali delle strutture, le tariffe dedicate e i rispettivi link di prenotazione.</div>
+      <div class="notice"><strong>Nota:</strong> le restanti due strutture possono essere aggiornate in seguito con i dati definitivi.</div>
     </div>
   </section>
 
@@ -290,17 +295,14 @@
             <a class="btn" target="_blank" rel="noopener" href="https://www.italotreno.it/">Italo Treno</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card" style="grid-column: 1 / -1;">
           <div class="icon">✈</div>
           <h3>In aereo</h3>
-          <p>L'aeroporto di Bari Palese è lo scalo primario. Confrontate rapidamente le opzioni di volo diretto in partenza dagli aeroporti di Milano.</p>
-          <a class="btn" target="_blank" rel="noopener" href="https://www.skyscanner.it/trasporti/voli/mila/bri/">Voli Milano - Bari</a>
-        </article>
-        <article class="card">
-          <div class="icon">🚗</div>
-          <h3>Noleggio auto</h3>
-          <p>Per massimizzare l'indipendenza negli spostamenti regionali, prenotate comodamente una vettura direttamente al terminal di arrivo.</p>
-          <a class="btn" target="_blank" rel="noopener" href="https://www.rentalcars.com/it/airport/it/bri/">Noleggio Aeroporto Bari</a>
+          <p>Potete scegliere indifferentemente l'aeroporto di <strong>Bari Palese</strong> o di <strong>Brindisi Casale</strong>, entrambi ugualmente comodi per raggiungere la Masseria. Confrontate le opzioni in partenza da Milano.</p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <a class="btn" target="_blank" rel="noopener" href="https://www.skyscanner.it/trasporti/voli/mila/bri/">Voli per Bari</a>
+            <a class="btn" target="_blank" rel="noopener" href="https://www.skyscanner.it/trasporti/voli/mila/bds/">Voli per Brindisi</a>
+          </div>
         </article>
       </div>
     </div>
@@ -329,7 +331,7 @@
         <h2>RSVP</h2>
         <p>Vi chiediamo gentilmente di confermare la vostra presenza entro il <strong>30 novembre 2026</strong>.</p>
       </div>
-      <form id="rsvpForm">
+      <form name="conferme-rsvp" method="POST" data-netlify="true" action="/">
         <div class="fields">
           <label>Nome e cognome
             <input name="nome" required placeholder="Il vostro nome">
@@ -355,8 +357,8 @@
           </label>
         </div>
         <div class="form-actions">
-          <button class="btn primary" type="submit">Prepara conferma</button>
-          <span class="small">Il pulsante apre il tuo programma email con il riepilogo compilato. La conferma verrà preparata per l'invio a giulia.deghi1@gmail.com.</span>
+          <button class="btn primary" type="submit">Invia conferma</button>
+          <span class="small">I tuoi dati verranno elaborati in modo sicuro per permettere agli sposi di organizzare al meglio l'evento.</span>
         </div>
       </form>
     </div>
@@ -373,12 +375,15 @@
         <article class="card" style="max-width:550px; width:100%; text-align:center;">
           <div class="icon">♡</div>
           <h3>Viaggio di nozze</h3>
-          <p>Qui potete inserire IBAN, intestazione e qualsiasi dettaglio utile per chi desidera contribuire.</p>
+          <p>Se desiderate contribuire al nostro viaggio, potete farlo tramite bonifico bancario:</p>
+          <p style="margin: 16px 0; color: var(--ink);">
+            <strong>Intestatari:</strong><br>BIANCO LUCAFILIPPO, DEGHI GIULIA<br><br>
+            <strong>IBAN:</strong><br><span style="font-family: monospace; font-size: 1.1rem;">IT87J0100533160000000005766</span>
+          </p>
           <button class="btn primary" onclick="copyIBAN()">Copia IBAN</button>
           <div id="ibanMessage" class="small" style="margin-top:12px"></div>
         </article>
       </div>
-      <div class="notice"><strong>IBAN:</strong> nel file è predisposto un valore di esempio. Sostituitelo con l'IBAN reale prima di pubblicare il sito.</div>
     </div>
   </section>
 
@@ -390,7 +395,7 @@
         <p>Elegante, romantico e in sintonia con l'atmosfera della nostra giornata pugliese.</p>
       </div>
       <div class="card" style="max-width:720px;margin:auto;text-align:center">
-        <h3>Estate in Puglia</h3>
+        <h3>Eleganza in Masseria</h3>
         <p>Abbigliamento elegante e confortevole. Per qualsiasi dubbio sul dress code, contattateci.</p>
       </div>
     </div>
@@ -415,7 +420,7 @@
           <a class="btn" href="tel:+393331234567">Chiama Luca</a>
         </article>
       </div>
-      <div class="notice"><strong>Prima della pubblicazione:</strong> sostituite i numeri di telefono, l'altri eventuali dati, l'IBAN, gli hotel e i link di prenotazione con i dati reali.</div>
+      <div class="notice"><strong>Prima della pubblicazione:</strong> sostituite i numeri di telefono, l'altri eventuali dati, gli hotel e i link di prenotazione con i dati reali.</div>
     </div>
   </section>
 </main>
@@ -430,29 +435,13 @@
 </footer>
 
 <script>
-  // DATI DA PERSONALIZZARE PRIMA DELLA PUBBLICAZIONE
-  const RSVP_EMAIL = "giulia.deghi1@gmail.com";
-  const IBAN = "INSERISCI-QUI-L-IBAN";
+  const IBAN = "IT87J0100533160000000005766";
 
   function comingSoon(e){
     e.preventDefault();
     alert("Il link di prenotazione verrà inserito a breve.");
     return false;
   }
-
-  document.getElementById("rsvpForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    const data = new FormData(this);
-    const subject = encodeURIComponent("RSVP matrimonio Luca e Giulia — " + data.get("nome"));
-    const body = encodeURIComponent(
-      "Nome e cognome: " + data.get("nome") + "\n" +
-      "Numero di invitati: " + data.get("numero") + "\n" +
-      "Presenza: " + data.get("presenza") + "\n" +
-      "Esigenze alimentari: " + (data.get("alimentazione") || "Nessuna") + "\n" +
-      "Messaggio: " + (data.get("messaggio") || "")
-    );
-    window.location.href = "mailto:" + RSVP_EMAIL + "?subject=" + subject + "&body=" + body;
-  });
 
   function copyIBAN(){
     navigator.clipboard.writeText(IBAN).then(()=>{
