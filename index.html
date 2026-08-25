@@ -28,10 +28,9 @@
       margin:0;
       color:var(--ink);
       background-color: var(--ivory);
-      /* Percorso esplicito allo sfondo locale con velatura avorio per la leggibilità */
       background-image: 
-        linear-gradient(rgba(247, 240, 232, 0.92), rgba(251, 246, 239, 0.98)), 
-        url('./sfondo-ulivi.jpg');
+        linear-gradient(rgba(247, 240, 232, 0.90), rgba(251, 246, 239, 0.98)), 
+        url('https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=2000&q=80');
       background-size: cover;
       background-position: center top;
       background-attachment: fixed;
@@ -75,7 +74,7 @@
       position:relative;
       box-shadow: 0 4px 15px rgba(0,0,0,0.04);
       object-fit: cover;
-      background-color: var(--paper); /* Colore di fallback */
+      background-color: var(--paper);
     }
     .intro{
       text-align:center;
@@ -148,18 +147,6 @@
       border-top:1px solid rgba(178,138,67,.28);
       border-bottom:1px solid rgba(178,138,67,.28);
     }
-    form{max-width:720px;margin:auto}
-    .fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    label{display:block;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-    input,select,textarea{
-      width:100%;margin-top:7px;padding:14px 15px;border:1px solid rgba(178,138,67,.45);
-      border-radius:12px;background:rgba(255,255,255,.65);font:inherit;color:var(--ink);
-      outline:none;
-    }
-    input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(178,138,67,.10)}
-    textarea{min-height:110px;resize:vertical}
-    .full{grid-column:1/-1}
-    .form-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:18px}
     .small{font-size:.72rem;color:var(--muted);line-height:1.6}
     .footer{text-align:center;padding:70px 0 35px}
     .footer .script{font-size:2.7rem}
@@ -173,14 +160,9 @@
     }
     .topbar a{font-size:.62rem;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;padding:9px 11px;border-radius:999px}
     .topbar a:hover{background:rgba(178,138,67,.12)}
-    .notice{
-      margin:20px auto 0;max-width:680px;padding:13px 16px;border-left:2px solid var(--gold);
-      background:rgba(251,246,239,.8);
-      color:var(--muted);font-size:.78rem;line-height:1.6;text-align:left;
-    }
     @media(max-width:760px){
       .topbar{display:none}
-      .grid,.stay,.fields{grid-template-columns:1fr}
+      .grid,.stay{grid-template-columns:1fr}
       .details{grid-template-columns:1fr}
       .timeline .item{grid-template-columns:1fr;gap:5px}
       section{padding:58px 0}
@@ -201,8 +183,7 @@
 
 <header class="hero">
   <div class="hero-card">
-    <!-- Percorso esplicito alla foto locale -->
-    <img src="./sposi.jpg" alt="Luca e Giulia">
+    <img src="./PHOTO-2026-08-25-12-04-08_2.jpg" alt="Luca e Giulia">
   </div>
   <div class="intro">
     <div class="ornament">♥</div>
@@ -249,7 +230,7 @@
       <div class="section-title">
         <div class="ornament">❧</div>
         <h2>Dove soggiornare</h2>
-        <p>Stiamo selezionando per voi alcune strutture nelle vicinanze. Qui potrete inserire hotel, B&B e masserie convenzionati con relativi contatti e link di prenotazione.</p>
+        <p>Stiamo selezionando per voi alcune strutture nelle vicinanze. Qui potrete trovare informazioni e link diretti per organizzare il vostro soggiorno.</p>
       </div>
       <div class="stay">
         <article class="card">
@@ -258,20 +239,21 @@
           <p style="margin-bottom: 24px;">Referente: <strong>Cinzia Pugliese</strong><br>Telefono: <a href="tel:+393490839801" style="text-decoration: underline; color: var(--gold);">+39 349 083 9801</a></p>
           <a class="btn primary" target="_blank" rel="noopener" href="http://www.trullopugliese.com">Visita il sito</a>
         </article>
+        
         <article class="card">
-          <div class="price">Struttura 02</div>
-          <h3>B&B / Masseria</h3>
-          <p>Nome struttura, distanza dalla location, eventuale tariffa dedicata e condizioni di soggiorno.</p>
-          <a class="btn" href="#" onclick="return comingSoon(event)">Prenota</a>
+          <div class="price">Appartamento</div>
+          <h3>Signora Lucia</h3>
+          <p style="margin-bottom: 24px;">Referente: <strong>Lucia</strong><br>Telefono: <a href="tel:+393208075984" style="text-decoration: underline; color: var(--gold);">+39 320 807 5984</a></p>
+          <a class="btn primary" target="_blank" rel="noopener" href="https://www.facebook.com/share/19AFoGt95y/?mibextid=wwXIfr">Visita la pagina</a>
         </article>
+        
         <article class="card">
-          <div class="price">Struttura 03</div>
-          <h3>Alternativa</h3>
-          <p>Una terza soluzione per chi desidera fermarsi in zona e vivere il weekend con noi.</p>
-          <a class="btn" href="#" onclick="return comingSoon(event)">Prenota</a>
+          <div class="price">Hotel</div>
+          <h3>Hotel Lanzillotta</h3>
+          <p style="margin-bottom: 24px;">Situato nelle vicinanze, offre diverse soluzioni eleganti per il vostro soggiorno.</p>
+          <a class="btn primary" target="_blank" rel="noopener" href="https://hotellanzillotta.it/">Visita il sito</a>
         </article>
       </div>
-      <div class="notice"><strong>Nota:</strong> le restanti due strutture possono essere aggiornate in seguito con i dati definitivi.</div>
     </div>
   </section>
 
@@ -334,39 +316,16 @@
         <h2>RSVP</h2>
         <p>Vi chiediamo gentilmente di confermare la vostra presenza entro il <strong>30 novembre 2026</strong>.</p>
       </div>
-      <!-- Modulo ottimizzato per acquisizione su DB Netlify senza redirect espliciti -->
-      <form name="conferme-rsvp" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="conferme-rsvp">
-        
-        <div class="fields">
-          <label>Nome e cognome
-            <input name="nome" required placeholder="Il vostro nome">
-          </label>
-          <label>Numero di invitati
-            <select name="numero" required>
-              <option value="">Seleziona</option>
-              <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
-            </select>
-          </label>
-          <label>Presenza
-            <select name="presenza" required>
-              <option value="">Seleziona</option>
-              <option>Sì, saremo presenti</option>
-              <option>Ci dispiace, non potremo esserci</option>
-            </select>
-          </label>
-          <label>Esigenze alimentari
-            <input name="alimentazione" placeholder="Eventuali allergie/intolleranze">
-          </label>
-          <label class="full">Messaggio
-            <textarea name="messaggio" placeholder="Un pensiero per gli sposi (facoltativo)"></textarea>
-          </label>
-        </div>
-        <div class="form-actions">
-          <button class="btn primary" type="submit">Invia conferma</button>
-          <span class="small">I tuoi dati verranno elaborati in modo sicuro per permettere agli sposi di organizzare al meglio l'evento.</span>
-        </div>
-      </form>
+      
+      <div style="display:flex; justify-content:center;">
+        <article class="card" style="max-width:600px; width:100%; text-align:center;">
+          <div class="icon">✉</div>
+          <h3>Conferma la tua presenza</h3>
+          <p>Abbiamo preparato un breve modulo per raccogliere le vostre conferme e le eventuali esigenze alimentari in modo semplice e veloce.</p>
+          
+          <a class="btn primary" target="_blank" rel="noopener" href="https://forms.gle/CK5aZjrkMKbWCQQW7">Compila il modulo</a>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -417,16 +376,15 @@
       <div class="grid">
         <article class="card">
           <h3>Giulia</h3>
-          <p>Telefono: <strong>331 7239747</strong></p>
+          <p>Telefono: <strong>+39 331 7239747</strong></p>
           <a class="btn" href="tel:+393317239747">Chiama Giulia</a>
         </article>
         <article class="card">
           <h3>Luca</h3>
-          <p>Telefono: <strong>327 6943803</strong></p>
+          <p>Telefono: <strong>+39 327 6943803</strong></p>
           <a class="btn" href="tel:+393276943803">Chiama Luca</a>
         </article>
       </div>
-      <div class="notice"><strong>Prima della pubblicazione:</strong> sostituite gli eventuali altri dati, gli hotel e i link di prenotazione con i dati reali.</div>
     </div>
   </section>
 </main>
@@ -442,12 +400,6 @@
 
 <script>
   const IBAN = "IT87J0100533160000000005766";
-
-  function comingSoon(e){
-    e.preventDefault();
-    alert("Il link di prenotazione verrà inserito a breve.");
-    return false;
-  }
 
   function copyIBAN(){
     navigator.clipboard.writeText(IBAN).then(()=>{
