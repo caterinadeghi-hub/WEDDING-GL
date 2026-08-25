@@ -28,9 +28,10 @@
       margin:0;
       color:var(--ink);
       background-color: var(--ivory);
+      /* Sfondo locale con trasparenza ridotta per rendere sposi, ulivi e trulli molto più visibili */
       background-image: 
-        linear-gradient(rgba(247, 240, 232, 0.90), rgba(251, 246, 239, 0.98)), 
-        url('https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=2000&q=80');
+        linear-gradient(rgba(247, 240, 232, 0.55), rgba(251, 246, 239, 0.88)), 
+        url('./sfondo.jpg');
       background-size: cover;
       background-position: center top;
       background-attachment: fixed;
@@ -51,7 +52,7 @@
       overflow:hidden;
     }
     .hero-card{
-      background:rgba(251,246,239,.82);
+      background:rgba(251,246,239,.95);
       border:1px solid rgba(178,138,67,.55);
       box-shadow:var(--shadow);
       padding:clamp(12px, 3vw, 22px);
@@ -79,6 +80,7 @@
     .intro{
       text-align:center;
       z-index: 1;
+      padding-top: 15px;
     }
 
     .eyebrow{
@@ -86,7 +88,8 @@
       letter-spacing:.24em;
       font-size:.72rem;
       color:var(--muted);
-      text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+      text-shadow: 0 1px 2px rgba(255,255,255,0.9);
+      font-weight: 600;
     }
     h1,h2,h3{font-family:"Cormorant Garamond",serif;font-weight:500}
     h1{font-size:clamp(2.7rem,7vw,5rem);margin:.2em 0;color:var(--olive-dark)}
@@ -94,17 +97,17 @@
       font-family:Parisienne,cursive;
       color:var(--gold);
       font-size:clamp(2rem,6vw,4rem);
-      text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+      text-shadow: 0 1px 2px rgba(255,255,255,0.9);
     }
-    .ornament{color:var(--gold);font-size:1.5rem;letter-spacing:.4em;margin:12px 0}
+    .ornament{color:var(--gold);font-size:1.5rem;letter-spacing:.4em;margin:12px 0; text-shadow: 0 1px 2px rgba(255,255,255,0.9);}
     section{padding:78px 0}
     .section-title{text-align:center;margin-bottom:34px}
     .section-title h2{font-size:clamp(2.2rem,5vw,3.4rem);margin:.15em 0}
     .section-title p{max-width:650px;margin:auto;color:var(--muted);line-height:1.8}
     .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
     .card{
-      background:rgba(251,246,239,.90);
-      backdrop-filter: blur(8px);
+      background:rgba(251,246,239,.94); /* Leggermente più opaco per contrastare lo sfondo visibile */
+      backdrop-filter: blur(10px);
       border:1px solid rgba(178,138,67,.42);
       border-radius:var(--radius);
       padding:30px;
@@ -138,7 +141,7 @@
       display:grid;grid-template-columns:120px 1fr;gap:22px;padding:20px 0;
       border-bottom:1px solid rgba(178,138,67,.28);
     }
-    .timeline time{font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:var(--gold)}
+    .timeline time{font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:var(--gold); text-shadow: 0 1px 2px rgba(255,255,255,0.8);}
     .timeline h3{margin:0;font-size:1.55rem}
     .timeline p{margin:5px 0;color:var(--muted);line-height:1.6}
     .rsvp{
@@ -153,7 +156,7 @@
     .footer p{color:var(--muted);font-size:.78rem;letter-spacing:.08em}
     .topbar{
       position:fixed;z-index:10;top:16px;left:50%;transform:translateX(-50%);
-      background:rgba(251,246,239,.90);backdrop-filter:blur(12px);
+      background:rgba(251,246,239,.95);backdrop-filter:blur(12px);
       border:1px solid rgba(178,138,67,.4);border-radius:999px;
       padding:7px;box-shadow:0 8px 25px rgba(78,64,43,.08);
       display:flex;gap:3px;
@@ -183,7 +186,8 @@
 
 <header class="hero">
   <div class="hero-card">
-    <img src="./PHOTO-2026-08-25-12-04-08_2.jpg" alt="Luca e Giulia">
+    <!-- NOME SEMPLIFICATO PER EVITARE ERRORI -->
+    <img src="./sposi.jpg" alt="Luca e Giulia">
   </div>
   <div class="intro">
     <div class="ornament">♥</div>
@@ -314,7 +318,7 @@
       <div class="section-title">
         <div class="ornament">♡</div>
         <h2>RSVP</h2>
-        <p>Vi chiediamo gentilmente di confermare la vostra presenza entro il <strong>30 novembre 2026</strong>.</p>
+        <p>Vi chiediamo gentilmente di confermare la vostra presenza entro il <strong>28 febbraio 2027</strong>.</p>
       </div>
       
       <div style="display:flex; justify-content:center;">
