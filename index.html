@@ -28,14 +28,23 @@
       margin:0;
       color:var(--ink);
       background-color: var(--ivory);
-      /* SFONDO ONLINE INFALLIBILE: carica direttamente l'immagine dal link */
+      font-family:Montserrat,system-ui,sans-serif;
+    }
+
+    /* SOLUZIONE PER LO SFONDO: Adattamento perfetto e alta qualità su PC e Smartphone */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
       background-image: 
         linear-gradient(rgba(247, 240, 232, 0.35), rgba(251, 246, 239, 0.50)), 
         url("https://i.postimg.cc/PxV9HNXN/sfondo.jpg");
       background-size: cover;
-      background-position: center center;
-      background-attachment: fixed;
-      font-family:Montserrat,system-ui,sans-serif;
+      background-position: center;
     }
     
     a{color:inherit}
@@ -227,27 +236,27 @@
       <div class="section-title">
         <div class="ornament">❧</div>
         <h2>Dove soggiornare</h2>
-        <p>Stiamo selezionando per voi alcune strutture nelle vicinanze. Qui potrete trovare informazioni e link diretti per organizzare il vostro soggiorno.</p>
+        <p>Abbiamo selezionato per voi alcune strutture ad Alberobello - nelle vicinanze di Noci. Qui potrete trovare informazioni e link diretti per organizzare il vostro soggiorno.</p>
       </div>
       <div class="stay">
         <article class="card">
-          <div class="price">Trullo</div>
-          <h3>Trullo Pugliese</h3>
+          <div class="price">Trulli pugliese</div>
+          <h3>Trulli Pugliese</h3>
           <p style="margin-bottom: 24px;">Referente: <strong>Cinzia Pugliese</strong><br>Telefono: <a href="tel:+393490839801" style="text-decoration: underline; color: var(--gold);">+39 349 083 9801</a></p>
           <a class="btn primary" target="_blank" rel="noopener" href="http://www.trullopugliese.com">Visita il sito</a>
         </article>
         
         <article class="card">
-          <div class="price">Appartamento</div>
-          <h3>Signora Lucia</h3>
-          <p style="margin-bottom: 24px;">Referente: <strong>Lucia</strong><br>Telefono: <a href="tel:+393208075984" style="text-decoration: underline; color: var(--gold);">+39 320 807 5984</a></p>
+          <div class="price">Casa vacanze</div>
+          <h3>Le Chianchiarelle</h3>
+          <p style="margin-bottom: 24px;">Referente: <strong>Sig.a Lucia</strong><br>Telefono: <a href="tel:+393208075984" style="text-decoration: underline; color: var(--gold);">+39 320 807 5984</a></p>
           <a class="btn primary" target="_blank" rel="noopener" href="https://www.facebook.com/share/19AFoGt95y/?mibextid=wwXIfr">Visita la pagina</a>
         </article>
         
         <article class="card">
           <div class="price">Hotel</div>
           <h3>Hotel Lanzillotta</h3>
-          <p style="margin-bottom: 24px;">Situato nelle vicinanze, offre diverse soluzioni eleganti per il vostro soggiorno.</p>
+          <p style="margin-bottom: 24px;">Situato nelle vicinanze di Noci, offre diverse soluzioni eleganti per il vostro soggiorno.</p>
           <a class="btn primary" target="_blank" rel="noopener" href="https://hotellanzillotta.it/">Visita il sito</a>
         </article>
       </div>
@@ -277,13 +286,23 @@
             <a class="btn" target="_blank" rel="noopener" href="https://www.italotreno.it/">Italo Treno</a>
           </div>
         </article>
-        <article class="card" style="grid-column: 1 / -1;">
+        <article class="card">
           <div class="icon">✈</div>
           <h3>In aereo</h3>
-          <p>Potete scegliere indifferentemente l'aeroporto di <strong>Bari Palese</strong> o di <strong>Brindisi Casale</strong>, entrambi ugualmente comodi per raggiungere la Masseria. Confrontate le opzioni in partenza da Milano.</p>
+          <p>Potete scegliere indifferentemente l'aeroporto di <strong>Bari Palese</strong> o di <strong>Brindisi Casale</strong>, entrambi ugualmente comodi per raggiungere la Masseria.</p>
           <div style="display:flex; gap:8px; flex-wrap:wrap;">
-            <a class="btn" target="_blank" rel="noopener" href="https://www.skyscanner.it/trasporti/voli/mila/bri/">Voli per Bari</a>
-            <a class="btn" target="_blank" rel="noopener" href="https://www.skyscanner.it/trasporti/voli/mila/bds/">Voli per Brindisi</a>
+            <a class="btn" target="_blank" rel="noopener" href="https://www.skyscanner.it/trasporti/voli/it/bri/">Voli per Bari</a>
+            <a class="btn" target="_blank" rel="noopener" href="https://www.skyscanner.it/trasporti/voli/it/bds/">Voli per Brindisi</a>
+          </div>
+        </article>
+        
+        <article class="card">
+          <div class="icon">🚗</div>
+          <h3>Auto a noleggio</h3>
+          <p>Per facilitare gli spostamenti, vi suggeriamo gentilmente di noleggiare un'auto per scoprire in totale libertà le meraviglie della nostra amata Puglia.</p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <a class="btn" target="_blank" rel="noopener" href="https://www.discovercars.com/it">DiscoverCars</a>
+            <a class="btn" target="_blank" rel="noopener" href="https://www.rentalcars.com/it">Rentalcars</a>
           </div>
         </article>
       </div>
