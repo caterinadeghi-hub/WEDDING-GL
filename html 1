@@ -1,5 +1,3 @@
-
-```html
 <!doctype html>
 <html lang="it">
 <head>
@@ -37,20 +35,16 @@
     a{color:inherit}
     .wrap{width:min(1080px,92vw);margin:auto}
     
+    /* Centratura e proporzioni della prima pagina */
     .hero{
       min-height:100svh;
-      display:grid;
-      place-items:center;
-      padding:40px 0;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:40px 20px;
       position:relative;
       overflow:hidden;
-    }
-    .hero .wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
     }
     .hero:before,.hero:after{
       content:"";
@@ -67,9 +61,9 @@
       border:1px solid rgba(178,138,67,.55);
       box-shadow:var(--shadow);
       padding:clamp(12px, 3vw, 22px);
-      max-width:min(500px, 65vh);
+      max-width:min(450px, 60vh); /* Controlla sia la larghezza che l'altezza massima */
       width:100%;
-      margin: 0 auto;
+      margin: 0 auto 30px auto;
       position:relative;
     }
     .hero-card:before{
@@ -85,10 +79,11 @@
       height:auto;
       position:relative;
       box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+      object-fit: cover;
     }
     .intro{
       text-align:center;
-      padding:0 20px;
+      z-index: 1;
     }
 
     .eyebrow{
@@ -197,15 +192,14 @@
 </nav>
 
 <header class="hero">
-  <div class="wrap">
-    <div class="hero-card">
-      <img src="assets/invito-principale.jpg" alt="Invito di matrimonio di Luca e Giulia">
-    </div>
-    <div class="intro">
-      <div class="ornament">♥</div>
-      <div class="eyebrow">Informazioni per i nostri invitati</div>
-      <div class="script">Benvenuti nel nostro giorno speciale</div>
-    </div>
+  <div class="hero-card">
+    <!-- IMAGO SEGNAPOSTO: Quando pubblicherai il sito reale, sostituisci il link qui sotto con: src="assets/invito-principale.jpg" -->
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Invito di matrimonio di Luca e Giulia">
+  </div>
+  <div class="intro">
+    <div class="ornament">♥</div>
+    <div class="eyebrow">Informazioni per i nostri invitati</div>
+    <div class="script">Benvenuti nel nostro giorno speciale</div>
   </div>
 </header>
 
@@ -470,5 +464,3 @@
 </script>
 </body>
 </html>
-
-```
