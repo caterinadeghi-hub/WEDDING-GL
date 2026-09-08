@@ -60,6 +60,15 @@
       position:relative;
       overflow:hidden;
     }
+    .hero-main-title{
+      font-family: Parisienne, cursive;
+      color: var(--gold);
+      font-size: clamp(3.5rem, 12vw, 5.5rem);
+      margin-bottom: 25px;
+      text-shadow: 0 1px 3px rgba(255,255,255,0.9);
+      text-align: center;
+      line-height: 1;
+    }
     .hero-card{
       background:rgba(251,246,239,.95);
       border:1px solid rgba(178,138,67,.55);
@@ -179,6 +188,7 @@
 </nav>
 
 <header class="hero">
+  <div class="hero-main-title">Luca e Giulia</div>
   <div class="hero-card">
     <img src="sposi-2.jpg" alt="Luca e Giulia">
   </div>
@@ -205,7 +215,7 @@
             <div class="detail"><strong>17:30</strong><span>Orario di inizio</span></div>
             <div class="detail"><strong>Masseria Miramonte</strong><span>Ai Monitilli · Noci (BA)</span></div>
           </div>
-          <p>Vi chiediamo gentilmente di arrivare con un po’ di anticipo, così da accogliervi e condividere insieme, fin dal primo momento, la gioia di questo giorno speciale.</p>
+          <br>
           <a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Masseria%20Miramonte%20Ai%20Monitilli%20Noci%20BA">Apri Google Maps</a>
         </article>
         <article class="card">
@@ -311,9 +321,7 @@
         <article class="card" style="max-width:600px; width:100%; text-align:center;">
           <div class="icon">✉</div>
           <h3>Conferma la tua presenza</h3>
-          <p>Abbiamo preparato un breve modulo per raccogliere le vostre conferme e le eventuali esigenze alimentari in modo semplice e veloce.</p>
-          
-          <a class="btn primary" target="_blank" rel="noopener" href="https://forms.gle/CK5aZjrkMKbWCQQW7">Compila il modulo</a>
+          <a class="btn primary" target="_blank" rel="noopener" href="https://forms.gle/CK5aZjrkMKbWCQQW7" style="margin-top: 15px;">Compila il modulo</a>
         </article>
       </div>
     </div>
