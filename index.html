@@ -336,12 +336,10 @@
       </div>
       <div style="display:flex; justify-content:center;">
         <article class="card" style="max-width:550px; width:100%; text-align:center;">
-          <p style="margin: 16px 0; color: var(--ink);">
+          <p style="margin: 0; color: var(--ink);">
             <strong>Intestatari:</strong><br>BIANCO LUCAFILIPPO, DEGHI GIULIA<br><br>
             <strong>IBAN:</strong><br><span style="font-family: monospace; font-size: 1.1rem;">IT87J0100533160000000005766</span>
           </p>
-          <button class="btn primary" onclick="copyIBAN()">Copia IBAN</button>
-          <div id="ibanMessage" class="small" style="margin-top:12px"></div>
         </article>
       </div>
     </div>
@@ -391,16 +389,5 @@
   </div>
 </footer>
 
-<script>
-  const IBAN = "IT87J0100533160000000005766";
-
-  function copyIBAN(){
-    navigator.clipboard.writeText(IBAN).then(()=>{
-      document.getElementById("ibanMessage").textContent = "IBAN copiato.";
-    }).catch(()=>{
-      document.getElementById("ibanMessage").textContent = "Seleziona e copia l'IBAN dal codice della pagina.";
-    });
-  }
-</script>
 </body>
 </html>
